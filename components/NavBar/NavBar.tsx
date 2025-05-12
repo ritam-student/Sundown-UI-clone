@@ -1,5 +1,5 @@
 import Image from "next/image";
-import "@/app/globals.css";
+import Button from "./Buttons";
 
 
 export default function NavBar() {
@@ -9,9 +9,9 @@ export default function NavBar() {
         </div>
 
         <div className="flex items-center justify-around gap-4 font-medium text-lg">
-            <div className="buttons px-4 py-2 border-2 border-[#C6BCB5] hover:border-0 rounded-full cursor-pointer relative overflow-hidden hover:text-white"><p className="z-10  relative">Work</p></div>
-            <div className="buttons px-4 py-2 border-2 border-[#C6BCB5] hover:border-0 rounded-full cursor-pointer relative overflow-hidden hover:text-white"><p className="z-10  relative">Studio</p></div>
-            <div className="buttons px-4 py-2 border-2 border-[#C6BCB5] hover:border-0 rounded-full cursor-pointer relative overflow-hidden hover:text-white"><p className="z-10  relative">Contact</p></div>
+            <Button content="Work"/>
+            <Button content="Studio"/>
+            <Button content="Contact"/>
         </div>
     </nav>
 }
