@@ -1,4 +1,16 @@
 @import "tailwindcss";
+ @font-face {
+  font-family: neu;
+  src: url(../public/NeueHaasDisplayMediu.ttf);
+ }
+
+* {
+  
+  font-family: neu;
+}
+
+
+
 
 .buttons::after {
   content: "";
@@ -15,4 +27,83 @@
 .buttons:hover::after {
   bottom: 0;
   border-radius: 0;
+}
+
+
+/** for hero section  **/
+
+@keyframes ani {
+  from {
+    transform: translate(20% , 0%);
+  }
+  to {
+    transform: translate(150% , -30%);
+  }
+}
+
+
+#box {
+  animation-name: ani;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes ani1 {
+  from {
+    transform: translate(0% , 10%);
+  }
+  to {
+    transform: translate(0% , -20%);
+  }
+}
+
+#box2 {
+  animation-name: ani1;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+
+
+
+@keyframes ani2 {
+  from {
+    transform: translate(0% , 20%);
+  }
+  to {
+    transform: translate(0% , -30%);
+  }
+}
+
+#box3 {
+  animation-name: ani2;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+
+
+
+@keyframes ani3 {
+  from {
+    transform: translate(0% , 30%);
+  }
+  to {
+    transform: translate(0% , -40%);
+  }
+}
+
+#box4 {
+  animation-name: ani3;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
