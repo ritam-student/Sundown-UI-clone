@@ -1,8 +1,16 @@
 @import "tailwindcss";
+
  @font-face {
   font-family: neu;
   src: url(../public/NeueHaasDisplayMediu.ttf);
  }
+
+ @font-face {
+  font-family: neuThin;
+  src: url(../public/SouvenirStd-Light-N67WEPZ6\ \(1\).otf);
+ }
+
+
 
 * {
   
@@ -128,5 +136,35 @@
   }
   to {
     transform: translate(-100%);
+  }
+}
+
+
+/**   who we are section   */
+
+.font-thin {
+  font-family: neuThin;
+}
+
+
+.animate {
+  background: linear-gradient(to top right , #FE330A , #fe530afc );
+  animation-name: animae;
+  animation-timing-function: ease;
+  animation-duration: 6s;
+  animation-direction: alternate ;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animae {
+  from{
+    transform: translate(4% , -4%)
+    skew(0);
+    filter: blur(20px);
+  }
+  to{
+    transform: translate(-14% , 14%)
+    skew(-8deg);
+    filter: blur(30px);
   }
 }

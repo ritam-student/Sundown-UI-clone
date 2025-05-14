@@ -4,7 +4,7 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Sundown",
+  title: "Sundown Studio",
   description: "Sundown studio clone",
 };
 
