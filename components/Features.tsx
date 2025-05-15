@@ -8,8 +8,6 @@ export default function Features ({setImage , setIsVissible} : {setImage: Dispat
      onMouseEnter={() => {
         setIsVissible(true);
      }}
-
-
     onMouseLeave={() => {
         setIsVissible(false);
     }}

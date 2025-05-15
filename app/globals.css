@@ -168,3 +168,9 @@
     filter: blur(30px);
   }
 }
+
+
+#swiper::-webkit-scrollbar {
+  display: none;
+}
+

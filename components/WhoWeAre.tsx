@@ -3,7 +3,7 @@ import "@/app/globals.css";
 
 
 export default function WeAre() {
-    return <div className="min-h-[80vh] h-auto w-full mt-30 relative px-4 sm:px-6 md:px-8 lg:px-10">
+    return <div className="min-h-[80vh] h-auto w-full mt-30 relative px-4 sm:px-6 md:px-8 lg:px-10 ">
         {/**  foreground part   */}
         <div className="flex flex-col justify-between h-full w-full py-5 relative  bg-transparent">
             <div className="flex justify-around gap-4 flex-col md:flex-row bg-transparent">
