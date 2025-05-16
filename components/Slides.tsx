@@ -16,9 +16,22 @@ export default function Slides() {
 
         <div className="mt-15 mx-10">
         <Swiper
-        slidesPerView={3.5}
+        slidesPerView={1}
         spaceBetween={30}
-        
+        breakpoints={{
+          640 : {
+            slidesPerView : 2
+          },
+          768 : {
+            slidesPerView : 2.5
+          },
+          1024 : {
+            slidesPerView : 3
+          },
+          1280 : {
+            slidesPerView : 3.5
+          }
+        }}
         className="mySwiper"
       >
         <SwiperSlide className="cursor-grab"><Slide imgUrl="nike.svg" content={"Retained Production support across retail and events in NY, CHI, LA. Creative Design, Design Management, Production/Project Management, and execution of work from concept to installation across the Country."} /></SwiperSlide>

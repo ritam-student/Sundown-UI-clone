@@ -174,3 +174,41 @@
   display: none;
 }
 
+
+
+#left-footer {
+  animation-name: left-animation;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes left-animation {
+  from{
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-10deg);
+  }
+}
+
+
+
+
+#right-footer {
+  animation-name: right-animation;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes right-animation {
+  from{
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(13deg);
+  }
+}
