@@ -11,6 +11,7 @@ import Projects from "@/components/Projects";
 import Slides from "@/components/Slides";
 import Footer from "@/components/Footer";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 export default function Home() {
   const [image , setImage] = useState("img1.webp");
@@ -61,7 +62,7 @@ export default function Home() {
 
 
       window.addEventListener("mousemove" , mouseMove);
-      window.addEventListener("mousedown" , showCursor);
+      window.addEventListener("mouseenter" , showCursor);
       window.addEventListener("mouseleave" , hideCursor);
 
     return () => {
@@ -73,6 +74,13 @@ export default function Home() {
       window.removeEventListener("mouseleave" , hideCursor);
     }
   } , []);
+
+
+  useGSAP(() => {
+    gsap.to(cursor.current , {
+      transform: "translateY(-20px)"
+    })
+  })
 
 
 

@@ -1,10 +1,14 @@
 import "@/app/globals.css";
 import gsap from "gsap";
-import { MouseEvent, useRef, useState } from "react";
+import { MouseEvent, useEffect, useRef, useState } from "react";
 
 export default function Hero(){
 
     const [hover , setHover] = useState(false);
+
+    useEffect(() => {
+        hide();
+    }, [])
 
     const mask = useRef(null);
     const move = (e : MouseEvent) => {
