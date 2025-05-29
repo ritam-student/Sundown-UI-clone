@@ -96,7 +96,7 @@ export default function Home() {
 
       <div className=" min-h-[100vh] h-auto w-full ">
         <div className="h-full w-full bg-[#EFEAE3] relative">
-          <div ref={cursor} className="h-[20px] w-[20px]  rounded-[100%] bg-black fixed top-0 left-0 "></div>
+          <div ref={cursor} className="h-[20px] w-[20px]  rounded-[100%] bg-black fixed top-0 left-0 cursor"></div>
           <NavBar />
           <Hero />
           <WeAre />

@@ -3,9 +3,22 @@
 import { useState } from "react";
 import Button from "./UI/Buttons";
 import Image from "next/image";
+import gsap from "gsap";
 
 
 export default function Projects() {
+
+    const hide = () => {
+        gsap.to(".cursor" , {
+            zIndex : -10
+        })
+    }
+
+    const show = () => {
+        gsap.to(".cursor" , {
+            zIndex : 0
+        })
+    }
 
     const [iteration , setIteration] = useState(1);
 
@@ -13,7 +26,7 @@ export default function Projects() {
         <div className="inline-block">
             <Button content="All Projects ->" />
         </div>
-        <div className="h-auto w-full bg-black rounded-3xl mt-15 flex flex-col md:flex-row items-center justify-between gap-4 ">
+        <div onMouseEnter={hide} onMouseLeave={show}  className="h-auto w-full bg-black rounded-3xl mt-15 flex flex-col md:flex-row items-center justify-between gap-4 ">
             <div className="md:w-1/2 w-full h-full px-4 md:px-10 py-3 rounded-3xl flex items-center justify-center">
                 <div className=" h-auto w-auto  text-white">
                     <div className="text-6xl border-l-2 border-[#504A45] ">
