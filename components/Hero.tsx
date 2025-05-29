@@ -1,11 +1,52 @@
 import "@/app/globals.css";
+import gsap from "gsap";
+import { MouseEvent, useRef, useState } from "react";
 
 export default function Hero(){
+
+    const [hover , setHover] = useState(false);
+
+    const mask = useRef(null);
+    const move = (e : MouseEvent) => {
+        const x = e.clientX;
+        const y = e.clientY;
+        const rect = document.querySelector(".mask")?.getBoundingClientRect();
+        let left , top;
+        const size = hover ? 200 : 0
+        if(rect) {
+            left = (x - rect?.left) - size / 2 ;
+            top = (y - rect?.top) - size / 2 ;
+        }
+
+
+
+        gsap.to(".mask" , {
+            maskPosition: `${left}px ${top}px`,
+            webkitMaskPosition : `${left}px ${top}px`,
+            ease: "power2.out"
+        })
+    }
+
+    const hide = () => {
+        gsap.to(".mask" , {
+            opacity: 0
+        })
+    }
+
+    const show = () => {
+        gsap.to(".mask" , {
+            opacity: 1,
+        })
+    }
+
     return (
         <div className="w-full h-auto px-4 sm:px-6 md:px-8 lg:px-10 ">
             <div className="w-full h-auto border-b-2 border-gray-300 flex flex-col-reverse md:flex-row  items-end justify-between pb-10 md:pb-20 pt-25">
                 <div className="w-full md:w-1/2 text-left mt-10 md:mt-0 text-3xl font-bold tracking-tighter leading-8">Sundown is a multi-disciplinary <br />studio focused on creating <br />unique, end-to-end experiences <br />and environments.</div>
-                <div className="w-full md:w-1/2 text-right font-bold text-[70px] sm:text-[90px] md:text-[100px] lg:text-[130px] leading-20 lg:leading-28 tracking-tight ">SPACES <br /> THAT <br />INSPIRE</div>
+                <div onMouseLeave={hide} onMouseEnter={show} className="w-auto cursor-pointer flex items-end justify-end  relative">
+                    <div onMouseMove={move}  onMouseOver={() => setHover(true)} className=" text-right font-bold text-[70px] sm:text-[90px] md:text-[100px] lg:text-[130px] leading-20 lg:leading-28 tracking-tight  inline-block">SPACES <br /> THAT <br />INSPIRE</div>
+                    <div  onMouseMove={move} ref={mask} onMouseOver={() => setHover(true)} className="mask absolute inset-0 text-right font-bold text-[70px] sm:text-[90px] md:text-[100px] lg:text-[130px] leading-20 lg:leading-28 tracking-tight  inline-block">SPACES <br /> THAT <br />INSPIRE</div>
+                </div>
             </div>
 
             {/**  video section  */}
@@ -28,7 +69,7 @@ export default function Hero(){
                     <h1>EXPERIENCES</h1>
                     <div className="bg-[#FE3E12] md:h-[70px] md:w-[70px] sm:h-[35px] sm:w-[35px] h-[28px] w-[28px] rounded-[100%] ml-4 mr-4 "></div>
                 </div>
-                <div className="flex items-center justify-between gap-5 content">
+                <div className="flex items-center justify-between gap-5 content ">
                     <h1>CONTENT</h1>
                     <div className="bg-[#FE3E12] md:h-[70px] md:w-[70px] sm:h-[35px] sm:w-[35px] h-[28px] w-[28px] rounded-[100%] ml-4 mr-4 "></div>
                     <h1>ENVIRONMENTS</h1>

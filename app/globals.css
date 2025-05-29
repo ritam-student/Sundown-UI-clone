@@ -170,11 +170,6 @@
 }
 
 
-#swiper::-webkit-scrollbar {
-  display: none;
-}
-
-
 
 #left-footer {
   animation-name: left-animation;
@@ -211,4 +206,15 @@
   to {
     transform: rotate(13deg);
   }
+}
+
+
+.mask {
+  mask-image: url("/Ellipse1.png");
+  -webkit-mask-image: url("/Ellipse1.png");
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  background-color: black;
+  color: #EFEAE3 ;
+  mask-position: 0% 0%;
 }

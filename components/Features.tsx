@@ -13,7 +13,7 @@ export default function Features ({setImage , setIsVissible} : {setImage: Dispat
         onMouseLeave={() => {
             setIsVissible(false);
         }}
-        className="min-h-[100vh] h-auto w-full relative mt-10 overflow-hidden bg-transparent hidden md:block ">
+        className=" h-auto w-full relative mt-10 overflow-hidden bg-transparent hidden md:block ">
             <div onMouseOver={() => {setImage("/img1.webp"); setIsVissible(true)}}
             ><FeatureBox main="Play New Kidvision" company="NIKE" /></div>
 
@@ -37,7 +37,7 @@ export default function Features ({setImage , setIsVissible} : {setImage: Dispat
             ><FeatureBox main="50th Anniversary" company="NIKE" /></div>
         </div>
 
-        <div className="block md:hidden min-h-[100vh] h-auto w-full relative mt-10 overflow-hidden bg-transparent ">
+        <div className="block md:hidden  h-auto w-full relative mt-10 overflow-hidden bg-transparent ">
             <FeatureBoxSmall main="Play New Kidvision" company="NIKE" image="img1.webp" />
             <FeatureBoxSmall main="SOHO NYC" company="ARC'TERYX" image="img2.webp" />
             <FeatureBoxSmall main="Makers Studio HOI" company="NIKE" env="false" image="img3.webp" />

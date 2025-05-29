@@ -8,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 export default function Slides() {
-    return <div className="min-h-[90vh] h-auto w-full px-4 sm:px-6 md:px-8 lg:px-10 py-10 ">
+    return <div className=" h-auto w-full px-4 sm:px-6 md:px-8 lg:px-10 py-10 ">
         <div className="flex items-center gap-2 ml-10">
             <div className="h-3 w-3 bg-[#FE330A] rounded-[100%] inline-block "></div>
             <h3 className="inline-block ">WHO WE WORK WITH</h3>
